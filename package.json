@@ -1,8 +1,7 @@
 {
-  "name": "electron-react-typescript-webpack-2022",
-  "productName": "ERWT Boilerplate",
-  "version": "7.2.0",
-  "description": "Custom boilerplate for writing Desktop Applications using Electron, React, Webpack, TypeScript in 2022",
+  "name": "pipewrench-electron-app",
+  "version": "1.0.0",
+  "description": "",
   "main": ".webpack/main",
   "scripts": {
     "start": "cross-env NODE_ENV=development electron-forge start",
@@ -24,17 +23,17 @@
   ],
   "author": {
     "name": "codesbiome",
-    "url": "https://github.com/codesbiome"
+    "url": "https://github.com/asledgehammer"
   },
   "contributors": [
     {
       "name": "guasam",
-      "url": "https://github.com/guasam"
+      "url": "https://github.com/JabDoesThings"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/codesbiome/electron-react-webpack-typescript-2022"
+    "url": "https://github.com/asledgehammer/pipewrench-electron-app"
   },
   "license": "MIT",
   "config": {

@@ -1,15 +1,3 @@
-/**
- * Copyright (c) 2021, Guasam
- *
- * This software is provided "as-is", without any express or implied warranty. In no event
- * will the authors be held liable for any damages arising from the use of this software.
- * Read the LICENSE file for more details.
- *
- * @author  : guasam
- * @project : Electron Window
- * @package : Window Titlebar (Component)
- */
-
 import React, { createRef, useContext, useEffect, useRef, useState } from 'react';
 import titlebarMenus from '../titlebarMenus';
 import classNames from 'classnames';
@@ -17,12 +5,6 @@ import WindowControls from './WindowControls';
 import context from '../titlebarContextApi';
 import { WindowContext } from './WindowFrame';
 import './Titlebar.less';
-
-type Props = {
-  title: string;
-  mode: 'centered-title';
-  icon?: string;
-};
 
 const Titlebar: React.FC<Props> = (props) => {
   const activeMenuIndex = useRef<number | null>(null);
@@ -191,6 +173,12 @@ const Titlebar: React.FC<Props> = (props) => {
       <WindowControls platform={windowContext.platform} tooltips={true} />
     </div>
   );
+};
+
+type Props = {
+  title: string;
+  mode: 'centered-title';
+  icon?: string;
 };
 
 export default Titlebar;

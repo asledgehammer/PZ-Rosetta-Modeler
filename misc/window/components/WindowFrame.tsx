@@ -1,29 +1,6 @@
-/**
- * Copyright (c) 2021, Guasam
- *
- * This software is provided "as-is", without any express or implied warranty. In no event
- * will the authors be held liable for any damages arising from the use of this software.
- * Read the LICENSE file for more details.
- *
- * @author  : guasam
- * @project : Electron Window
- * @package : Window Frame (Component)
- */
-
 import React, { useEffect, useRef } from 'react';
 import Titlebar from './Titlebar';
 import logo from '@assets/images/logo.png';
-
-type Props = {
-  title?: string;
-  borderColor?: string;
-  platform: 'windows' | 'mac';
-  children: React.ReactNode;
-};
-
-type Context = {
-  platform: 'windows' | 'mac';
-};
 
 export const WindowContext = React.createContext<Context>({
   platform: 'windows',
@@ -57,6 +34,17 @@ const WindowFrame: React.FC<Props> = (props) => {
       <div className='window-content'>{props.children}</div>
     </WindowContext.Provider>
   );
+};
+
+type Props = {
+  title?: string;
+  borderColor?: string;
+  platform: 'windows' | 'mac';
+  children: React.ReactNode;
+};
+
+type Context = {
+  platform: 'windows' | 'mac';
 };
 
 export default WindowFrame;
